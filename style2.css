@@ -26,38 +26,35 @@
     font-family: 'Abel', sans-serif;
 }
 
-
-#divss {
+.x {
     display: flex;
     background-color: orange;
     align-content: center;
     justify-content: center;
 }
 
-#divss div {
-    background-color: rgb(255, 217, 0);
-    align-items: center;
-    margin: 10px;
-    width: 100%;
-    text-align: center;
-    font-family: sans-serif;
-}
+table, td, th {
+    background-color: rgb(255, 106, 0);
+    border: solid black 1px;
+    border-collapse: collapse;
+    padding: 10px;
+  }
+  
+  #container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
 
-#divss2 {
+.form {
+    border: solid black 1px;
+    border-collapse: collapse;
+    padding: 10px;
     display: flex;
     background-color: orange;
     align-content: center;
     justify-content: center;
-}
-
-#divss2 div {
-    background-color:  rgb(255, 217, 0);
-    align-items: center;
-    margin: 5px;
-    width: 40%;
-    text-align: center;
-    font-family: sans-serif;
-}
+  }
 
 
 body {
@@ -72,6 +69,3 @@ body {
         }
     }
     
-.para {
-    font-family: sans-serif;
-}

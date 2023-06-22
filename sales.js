@@ -1,8 +1,11 @@
 "use strict";
+console.log("salmon cookies");
 
 const container = document.getElementById("container");
 
 const hours = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
+
+console.log(hours.length);
 
 const seattle = {
   storeName: "seattle",
@@ -16,6 +19,7 @@ const seattle = {
     for (let i = 0; i < hours.length; i++) {
       this.customersEachHour.push(randomNum(this.minCustPerHour, this.maxCustPerHour));
     }
+    
   },
   calcCookiesEachHour: function () {
     for (let i = 0; i < hours.length; i++) {
@@ -61,7 +65,7 @@ const tokyo = {
     for (let i = 0; i < hours.length; i++) {
       this.customersEachHour.push(randomNum(this.minCustPerHour, this.maxCustPerHour));
     }
-
+  
   },
   calcCookiesEachHour: function () {
     for (let i = 0; i < hours.length; i++) {
@@ -95,7 +99,7 @@ const tokyo = {
   },
 };
 
-const dubai = {
+const dubia = {
   storeName: "dubai",
   minCustPerHour: 11,
   maxCustPerHour: 38,
@@ -107,7 +111,7 @@ const dubai = {
     for (let i = 0; i < hours.length; i++) {
       this.customersEachHour.push(randomNum(this.minCustPerHour, this.maxCustPerHour));
     }
-    
+
   },
   calcCookiesEachHour: function () {
     for (let i = 0; i < hours.length; i++) {
@@ -153,7 +157,7 @@ const paris = {
     for (let i = 0; i < hours.length; i++) {
       this.customersEachHour.push(randomNum(this.minCustPerHour, this.maxCustPerHour));
     }
-   
+    
   },
   calcCookiesEachHour: function () {
     for (let i = 0; i < hours.length; i++) {
@@ -234,23 +238,22 @@ const lima = {
 };
 
 
-
-
-
-
 function randomNum(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-
-
-
-
-
-
-
 seattle.render();
 tokyo.render();
-dubai.render();
+dubia.render();
 paris.render();
 lima.render();
+
+const allShops = [seattle, tokyo, dubia, paris, lima];
+
+function renderAllShops() {
+  for (let i = 0; i < allShops.length; i++) {
+    allShops[i].render();
+  }
+}
+
+renderAllShops();

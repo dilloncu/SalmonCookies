@@ -4,13 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Salmon-Cookies</title>
+    <link rel="stylesheet" href="style2.css">
   </head>
   <body>
-    <a href=""><img src="salmon.png" style="width:70px;height:70px;"></a>
-    <a href="index.html">Home</a>
-    <a href="">Sales</a>
-    <div id="container"></div>
-    <script src="sales.js"></script>
+    <nav class="logo" class="navlinks">
+      <ui class="ulstyle">
+       <li><a href="index.html">Home</a></li>
+       <li><img src="salmon.png" style="width:150px;height:50px;"></li>
+       <li><a href="sales.html">Sales</a></li>
+      </ui>
+    </nav>
+    <section class="x">
+      <div id="container">
+        <table id="store-table"></table>
+      </div>
+      <script src="shop.js"></script>
+    </section>
+    <section>
+      <div class="form">
+        <form id="new-store-form">
+          <fieldset>
+            <legend>Search for different Store:</legend>
+            <label for="name-input">Store Name:</label>
+            <input type="text" id="name-input" name="name" />
+            <label for="min-cust-input">Min Customers per Hour</label>
+            <input type="number" name="minCust" id="min-cust-input">
+            <label for="max-cust-input">Max Customers per Hour</label>
+            <input type="number" name="maxCust" id="max-cust-input">
+            <label for="avg-cookies-input">Avg Cookies sold per customer</label>
+            <input type="number" name="avgCookies" id="avg-cookies-input" step="0.1" min="0">
+            <button id="submit-button">submit</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
   </body>
 </html>
