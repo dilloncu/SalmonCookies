@@ -1,10 +1,11 @@
 "use strict";
-console.log("Script In Construction");
 
 const storeTable = document.getElementById("store-table");
 const newStoreForm = document.getElementById("new-store-form");
 
 const hours = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
+
+const allStores = [];
 
 function randomNum(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -18,9 +19,10 @@ function CookieStore(storeName, minCustPerHour, maxCustPerHour, avgCookiesPerHou
   this.customersEachHour = [];
   this.cookiesEachHour = [];
   this.totalDailyCookies = 0;
-  this.calcCustomersEachHour();
-  this.calcCookiesEachHour();
+  // this.calcCustomersEachHour();
+  // this.calcCookiesEachHour();
   this.render();
+  this.pushStore();
 }
 
 CookieStore.prototype.calcCustomersEachHour = function () {
@@ -35,6 +37,10 @@ CookieStore.prototype.calcCookiesEachHour = function () {
     this.cookiesEachHour.push(oneHour);
     this.totalDailyCookies += oneHour;
   }
+};
+
+CookieStore.prototype.pushStore = function () {
+  allStores.push(this);
 };
 
 CookieStore.prototype.render = function () {
@@ -60,6 +66,26 @@ CookieStore.prototype.render = function () {
 
   storeTable.appendChild(tr);
 };
+
+function hoursRow() {
+  const tr = document.createElement("tr");
+  const th = document.createElement("th");
+  th.textContent = "Store Location";
+  tr.appendChild(th);
+
+  for (let i = 0; i < hours.length; i++) {
+    const th = document.createElement("th");
+    th.textContent = hours[i];
+    tr.appendChild(th);
+}
+
+const storeTotalsHeaderCell = document.createElement("th");
+storeTotalsHeaderCell.textContent = "Store Totals";
+tr.appendChild(storeTotalsHeaderCell);
+storeTable.appendChild(tr);
+}
+
+hoursRow();
 
 const seattle = new CookieStore("seattle", 23, 65, 6.3);
 const tokyo = new CookieStore("tokyo", 3, 24, 1.2);
