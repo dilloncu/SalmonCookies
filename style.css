@@ -5,7 +5,7 @@
  justify-content: center;
  align-items: baseline;
  align-content: stretch;
- background-color: orange
+ background-color: rgb(255, 255, 255)
     
 }
 
@@ -13,11 +13,12 @@
     list-style-type: none;
     display: inline-flex;
     gap: 90px;
-    background-color: orange;
+    background-color: rgb(255, 255, 255);
     padding: 20px;
     font-size: 40px;
-    color: orange;
+    color: rgb(255, 255, 255);
     font-family: sans-serif;
+    border: solid blue;
 }
 
 .navlinks a:hover {
@@ -29,39 +30,41 @@
 
 #divss {
     display: flex;
-    background-color: orange;
+    background-color: rgb(255, 255, 255);
     align-content: center;
     justify-content: center;
 }
 
 #divss div {
-    background-color: rgb(255, 217, 0);
+    background-color: rgb(255, 255, 255);
     align-items: center;
     margin: 10px;
     width: 100%;
     text-align: center;
     font-family: sans-serif;
+    border: solid blue;
 }
 
 #divss2 {
     display: flex;
-    background-color: orange;
+    background-color: rgb(255, 255, 255);
     align-content: center;
     justify-content: center;
 }
 
 #divss2 div {
-    background-color:  rgb(255, 217, 0);
+    background-color:  rgb(255, 255, 255);
     align-items: center;
     margin: 5px;
     width: 40%;
     text-align: center;
     font-family: sans-serif;
+    border: solid blue;
 }
 
 
 body {
-    background-color: darkorange;
+    background-color: rgb(255, 255, 255);
 }
     @media all and (max-width: 550px){
         .main{

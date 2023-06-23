@@ -5,7 +5,7 @@
  justify-content: center;
  align-items: baseline;
  align-content: stretch;
- background-color: orange
+ background-color: rgb(255, 255, 255)
     
 }
 
@@ -13,11 +13,12 @@
     list-style-type: none;
     display: inline-flex;
     gap: 90px;
-    background-color: orange;
-    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
     font-size: 40px;
-    color: orange;
+    color: rgb(255, 255, 255);
     font-family: sans-serif;
+    border: solid blue;
 }
 
 .navlinks a:hover {
@@ -28,14 +29,16 @@
 
 .x {
     display: flex;
-    background-color: orange;
+    background-color: rgb(255, 255, 255);
     align-content: center;
     justify-content: center;
+    border: solid blue;
+    padding: 1px;
 }
 
 table, td, th {
-    background-color: rgb(255, 106, 0);
-    border: solid black 1px;
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(0, 26, 255) 4px;
     border-collapse: collapse;
     padding: 10px;
   }
@@ -51,14 +54,14 @@ table, td, th {
     border-collapse: collapse;
     padding: 10px;
     display: flex;
-    background-color: orange;
+    background-color: rgb(255, 255, 255);
     align-content: center;
     justify-content: center;
   }
 
 
 body {
-    background-color: darkorange;
+    background-color: rgb(255, 255, 255);
 }
     @media all and (max-width: 550px){
         .main{

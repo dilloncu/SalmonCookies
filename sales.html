@@ -15,28 +15,27 @@
        <li><a href="sales.html">Sales</a></li>
       </ui>
     </nav>
-    <section class="x">
-      <div id="container">
-        <table id="store-table"></table>
-      </div>
-      <script src="shop.js"></script>
-    </section>
-    <section>
-      <div class="form">
-        <form id="new-store-form">
-          <fieldset>
-            <legend>Search for different Store:</legend>
-            <label for="name-input">Store Name:</label>
-            <input type="text" id="name-input" name="name" />
-            <label for="min-cust-input">Min Customers per Hour</label>
-            <input type="number" name="minCust" id="min-cust-input">
-            <label for="max-cust-input">Max Customers per Hour</label>
-            <input type="number" name="maxCust" id="max-cust-input">
-            <label for="avg-cookies-input">Avg Cookies sold per customer</label>
-            <input type="number" name="avgCookies" id="avg-cookies-input" step="0.1" min="0">
-            <button id="submit-button">submit</button>
-          </fieldset>
-        </form>
+    <section class="">
+        <div id="container">
+          <table id="store-table"></table>
+        </div>
+        <div class="x">
+          <form id="new-store-form">
+            <fieldset>
+              <legend>Enter Cookie Store:</legend>
+              <label for="name-input">Store Name:</label>
+              <input type="text" id="name-input" name="name" />
+              <label for="min-cust-input">Min Customers per Hour</label>
+              <input type="number" name="minCust" id="min-cust-input" />
+              <label for="max-cus-input">Max Customers per Hour</label>
+              <input type="number" name="maxCust" id="max-cust-input" />
+              <label for="avg-cookies-input">Average cookies Sold per customer</label>
+              <input type="number" name="avgCookies" id="avg-cookies-input" step="0.1" min="0" />
+              <button id="submit-button" type="submit">SUBMIT</button>
+            </fieldset>
+          </form>
+        </div>
+        <script src="shop.js"></script>
       </div>
     </section>
   </body>

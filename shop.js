@@ -1,7 +1,6 @@
 "use strict";
 console.log("Script In Construction");
 
-const container = document.getElementById("container");
 const storeTable = document.getElementById("store-table");
 const newStoreForm = document.getElementById("new-store-form");
 
