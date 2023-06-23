@@ -110,7 +110,7 @@ function hourlyTotals() {
     tr.appendChild(th);
   }   
 
-   let totalToals = 0;
+   let totalTotals = 0;
    for (let i = 0; i < allStores.length; i++) {
     totalTotals += allStores[i].totalDailyCookies;
    }
