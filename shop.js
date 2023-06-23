@@ -68,13 +68,50 @@ const dubia = new CookieStore("dubia", 11, 38, 2.3);
 const paris = new CookieStore("paris", 20, 38, 2.3);
 const Lima = new CookieStore("lima", 2, 16, 4.6);
 
+function hourlyTotals() {
+  const tr = document.createElement("tr");
+  const th = document.createElement("th");
+  th.textContent = "Hourly Totals";
+  tr.appendChild(th);
+
+  for (let i = 0; i< hours.length; i++) {
+    const th = document.createElement("th");
+    let hoursAdded = 0;
+    for (let j = 0; j < allStores.length; j++) {
+      const hourAmount = allStores[j].cookiesEachHour[i];
+      hoursAdded += hourAmount;
+    }
+    th.textContent = hoursAdded;
+    tr.appendChild(th);
+  }   
+
+   let totalToals = 0;
+   for (let i = 0; i < allStores.length; i++) {
+    totalTotals += allStores[i].totalDailyCookies;
+   }
+
+   const totalsCell = document.createElement("th");
+   totalsCell.textContent = totalTotals;
+   tr.appendChild(totalsCell);
+
+   storeTable.appendChild(tr);
+}
+hourlyTotals();
 
 newStoreForm.addEventListener("submit", function (event) {
   event.preventDefault();
+  storeTable.innerHTML = "";
+  hoursRow();
+  
+ for (let i = 0; i < allStores.length; i++) {
+  allStores[i].render();
+ }
+
   const storeNameInput = event.target.name.value;
   const minCustInput = event.target.minCust.value;
   const maxCustInput = event.target.maxCust.value;
   const avgCookiesPerHour = event.target.avgCookies.value;
   const store = new CookieStore(storeNameInput, minCustInput, maxCustInput, avgCookiesPerHour);
   newStoreForm.reset();
+  hourlyTotals();
 });
